@@ -9,7 +9,9 @@ import Dashboard from './Dashboard';
 //
 
 test("shows the controls and display", () => {
-
+  const wrapper = rtl.render(<Dashboard />);
+  expect(wrapper.getByTestId("controls"));
+  expect(wrapper.getByTestId("display"));
 })
 
 test("defaults to `unlocked` and `open`", () => {
